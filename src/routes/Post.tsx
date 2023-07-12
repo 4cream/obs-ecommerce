@@ -12,4 +12,4 @@ function AppRoutes() {
     return routes;
 }
 
-export {AppRoutes};
+export { AppRoutes };

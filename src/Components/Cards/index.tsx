@@ -1,5 +1,14 @@
+type Product = {
+    id: number;
+    name: string;
+    href: string;
+    price: string;
+    color: string;
+    imageSrc: string;
+    imageAlt: string;
+};
 
-const products = [
+const products:Product[] = [
     {
       id: 1,
       name: 'Basic Tee',
@@ -12,7 +21,7 @@ const products = [
     // More products...
   ];
   
-  function Cards({product}) {
+  function Cards() {
 
     return (
       <div className="bg-white">
