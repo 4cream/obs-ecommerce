@@ -14,7 +14,7 @@ function classNames(...classes:string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Navbar() {
+function Navbar():JSX.Element {
   return (
     <Disclosure as="nav" className="bg-gray-50">
       {({ open }) => (

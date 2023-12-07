@@ -1,6 +1,6 @@
-// import React from 'react'
+import {Props} from '../../interfaces-and-types/index';
 
-function Layout({children = null}) {
+function Layout({children}:Props):JSX.Element {
   return (
     <section>
       {children}
