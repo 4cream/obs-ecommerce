@@ -10,11 +10,11 @@ const navigation = [
   { name: 'Calendar', to: '/products', current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes:string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Navbar() {
+function Navbar():JSX.Element {
   return (
     <Disclosure as="nav" className="bg-gray-50">
       {({ open }) => (
