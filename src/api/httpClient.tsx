@@ -1,47 +1,61 @@
-import {Product} from '../interfaces-and-types/index';
+// import {Product} from '../interfaces-and-types/index';
 
 // create a fetch function to get the data from the const products array
-export const fetchProducts = () => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(products);
-        }, 1000);
-    });
+// export const fetchProducts = () => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(products);
+//         }, 1000);
+//     });
+// };
+
+// fetch function to get the data from the backend API
+export const fetchProducts = async () => {
+    try {
+        const response = await fetch('http://localhost:1234/products');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
 };
     
 
-const products: Product[] = [
-    {
-        id: 1,
-        name: 'Earthen Bottle',
-        href: '#',
-        price: '$48',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
-        imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
-    },
-    {
-        id: 2,
-        name: 'Nomad Tumbler',
-        href: '#',
-        price: '$35',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
-        imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
-    },
-    {
-        id: 3,
-        name: 'Focus Paper Refill',
-        href: '#',
-        price: '$89',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
-        imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
-    },
-    {
-        id: 4,
-        name: 'Machined Mechanical Pencil',
-        href: '#',
-        price: '$35',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
-        imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
-    },
-    // More products...
-];
+// const products: Product[] = [
+//     {
+//         id: 1,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Black',
+//       },
+//     {
+//         id: 2,
+//         name: 'Basic Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Aspen White',
+//       },
+//     {
+//         id: 3,
+//         name: 'Basic',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Charcoal',
+//       },
+//     {
+//         id: 4,
+//         name: 'Artwork Tee',
+//         href: '#',
+//         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg',
+//         imageAlt: "Front of men's Basic Tee in black.",
+//         price: '$35',
+//         color: 'Iso Dots',
+//       },
+// ];

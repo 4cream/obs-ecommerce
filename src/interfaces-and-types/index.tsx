@@ -9,6 +9,7 @@ export type Product = {
     name: string;
     href: string;
     price: string;
+    color: string;
     imageSrc: string;
     imageAlt: string;
 };

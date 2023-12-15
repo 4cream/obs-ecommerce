@@ -7,6 +7,7 @@ import { Navbar } from '../Navbar';
 import { Modal } from '../../Components/Modal';
 import { GlobalProvider } from '../../Context/global-context';
 
+
 function App() {
   const [openModal, setOpenModal] = React.useState<boolean>(false);
 
